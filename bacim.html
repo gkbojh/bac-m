@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizemin mekani</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .question {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        #no {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="question"> ÖMÜR BOYU BIRICIK BACIM OLMAYI KABUL EDIYOR MUSUN 💖</p>
+        <div class="buttons">
+            <button class="button" onclick="alert('SAVOLASAYDIN! Seni seviyorum bacim! ❤️')">EVET</button>
+            <button class="button" id="no">HAYIR</button>
+        </div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById('no');
+        noButton.addEventListener('mouseover', function() {
+            const x = Math.random() * (window.innerWidth - noButton.clientWidth);
+            const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
+ 
